@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Profile - TravelExplore Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <main class="profile-page">
+        <section class="profile-container">
+            <div class="profile-header">
+                <div class="profile-img">
+                    <img src="https://via.placeholder.com/150" alt="User Profile Picture">
+                </div>
+                <div class="profile-info">
+                    <h1>Rohan Chawan</h1>
+                    <p>Email: Rohan@example.com</p>
+                    <p>Phone: +1234567890</p>
+                </div>
+            </div>
+
+            <div class="profile-body">
+                <h2>Update Your Profile</h2>
+                <form id="profile-form" class="profile-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Full Name:</label>
+                            <input type="text" id="name" name="name" value="Rohan Chawan" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                            <input type="email" id="email" name="email" value="Rohan@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone"><i class="fas fa-phone"></i> Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" value="+1234567890" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address"><i class="fas fa-map-marker-alt"></i> Address:</label>
+                            <input type="text" id="address" name="address" value="1234 Main St, City, Country" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password"><i class="fas fa-lock"></i> Password:</label>
+                            <input type="password" id="password" name="password" placeholder="Update password">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Save Changes</button>
+                </form>
+
+                <div id="profile-update-message" class="hidden">
+                    <p>Your profile has been updated successfully!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('profile-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Show the profile update message
+            document.getElementById('profile-update-message').classList.remove('hidden');
+            
+            // Optionally, clear password field after update
+            document.getElementById('password').value = '';
+        });
+    </script>
+</body>
+</html>

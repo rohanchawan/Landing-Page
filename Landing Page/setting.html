@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - TravelExplore Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="settings-page">
+        <section class="settings-container">
+            <h1>Settings</h1>
+
+            <form id="settings-form" class="settings-form">
+                <!-- Account Settings -->
+                <div class="settings-section">
+                    <h2>Account Settings</h2>
+                    <div class="form-group">
+                        <label for="language">Preferred Language:</label>
+                        <select id="language" name="language">
+                            <option value="en" selected>English</option>
+                            <option value="fr">French</option>
+                            <option value="hi">Hindi</option>
+                            <option value="es">German</option>
+                            <option value="de">Spanish</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timezone">Timezone:</label>
+                        <select id="timezone" name="timezone">
+                            <option value="UTC">UTC</option>
+                            <option value="CET">Central European Time</option>
+                            <option value="EST">Eastern Standard Time</option>
+                            <option value="PST">Pacific Standard Time</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Notification Settings -->
+                <div class="settings-section">
+                    <h2>Notification Settings</h2>
+                    <div class="form-group">
+                        <label for="email-notifications">Email Notifications:</label>
+                        <input type="checkbox" id="email-notifications" name="email_notifications" checked>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sms-notifications">SMS Notifications:</label>
+                        <input type="checkbox" id="sms-notifications" name="sms_notifications">
+                    </div>
+                </div>
+
+                <!-- Security Settings -->
+                <div class="settings-section">
+                    <h2>Security Settings</h2>
+                    <div class="form-group">
+                        <label for="password">Update Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter new password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm new password">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-save-settings">Save Changes</button>
+            </form>
+
+            <div id="settings-update-message" class="hidden">
+                <p>Your settings have been updated successfully!</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('settings-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Show the settings update message
+            document.getElementById('settings-update-message').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

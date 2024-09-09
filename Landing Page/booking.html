@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Bookings - TravelExplore Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">TravelExplore</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="dest.html">Destinations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="book.html" class="cta">Book Now</a>
+    </nav><br><br><br> <br>
+
+    <main class="bookings-page">
+        <section class="bookings-container">
+            <h1>Your Bookings</h1>
+
+            <table class="bookings-table">
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Destination</th>
+                        <th>Departure Date</th>
+                        <th>Return Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>123456</td>
+                        <td>Germany</td>
+                        <td>2024-10-10</td>
+                        <td>2024-10-20</td>
+                        <td><span class="status-confirmed">Confirmed</span></td>
+                        <td><button class="btn-details">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>987654</td>
+                        <td>Italy</td>
+                        <td>2024-12-05</td>
+                        <td>2024-12-15</td>
+                        <td><span class="status-pending">Pending</span></td>
+                        <td><button class="btn-details">View Details</button></td>
+                    </tr>
+                    <tr>
+                        <td>456789</td>
+                        <td>Paris</td>
+                        <td>2025-02-10</td>
+                        <td>2025-02-20</td>
+                        <td><span class="status-canceled">Canceled</span></td>
+                        <td><button class="btn-details">View Details</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
